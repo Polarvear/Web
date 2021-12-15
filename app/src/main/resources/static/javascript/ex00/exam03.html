@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>exam</title>
+</head>
+<body>
+  <h1>요점 정리 - 3.함수 정의와 호출</h1>
+  
+<script>
+function plus(a, b) {
+  return a + b;
+}
+console.log(plus(10, 20));
+
+var ok; //undefind
+console.log(ok)
+
+
+ok = plus; // 함수도 변수에 할당가능ㄷㄷ함수 선언문이었나? 머였지 함수 표현식이었음ㅇㅇ
+//https://joshua1988.github.io/web-development/javascript/function-expressions-vs-declarations/
+console.log(ok(100, 200));
+
+let haha = ok;
+console.log(haha(1000, 2000));
+
+ok = "hello"
+ok(100,200)
+</script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
