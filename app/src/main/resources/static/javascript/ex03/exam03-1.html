@@ -9,24 +9,50 @@
 <script>
 // 자바스크립트의 함수는 함수를 호출할 때 전달한 값들을 보관하는 배열과 유사한 변수를 내장하고 있다. 
 // => 그 내장 변수의 이름은 "arguments" 이다.
-function f1(a) { 
-	console.log("a =", a);
-	console.log("----------------");
-	
-	console.log(arguments.length);
-	
-  for (var value of arguments) {
-    console.log(value);
-  }
-  console.log("----------------");
-  for (var i in arguments) {
-    console.log(arguments[i]);
-  }
-  console.log("----------------");
-  for (var i = 0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-  }
+function f1(a) {
+    console.log("a =", a);
+    console.log(arguments) // arguments에는 넘어오는 모든 값이 저장되어있다.
+    console.log(arguments.length);
 }
+
+f1()
+console.log('--------------')
+f1(100)
+console.log('--------------')
+f1(100,200,300) //얘네 전부 아규먼트에 들어가있음
+console.log('--------------')
+
+function f2(a) {
+    for (var i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+f2(100,200,300)
+
+function f3(a) {
+    for (var value of arguments) {
+        console.log(value);
+    }
+}
+console.log('f3확인입니다..', )
+f3(100,200,300)
+
+console.log("-----------")
+function f4(a) {
+
+    for (var i in arguments) {
+        console.log(arguments[i]);
+    }
+}
+
+f4(100,200,300)
+
+function f5(a) {
+    arguments.forEach(function (value){  //d안댐 배열이 아니라서ㄴ
+        console.log(value)
+    })
+
+
 
 //f1();
 //f1(100);

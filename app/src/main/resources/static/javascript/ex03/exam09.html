@@ -20,12 +20,43 @@
 function play(cb) {
     console.log("계산 결과 =", cb(100, 200));  // 콜백 함수
 }
+console.log("--------")
+console.log(plus(10, 20))
+console.log("--------")
 
 function plus(a, b) {return a + b;}
 function minus(a, b) {return a - b;}
+function divide(a, b) {return a / b;}
 
+function 곱하기(a , b) {return a * b;}
+
+function 나누기() {
+    console.log('하이요')
+}
+
+function 플레이(a ,b) {
+    console.log(a+b) // 값을 내줄 때는 리턴을 해야함ㅇㅇ // 이렇게 똥싸기 불가능ㅇ
+    return a + b
+}
+
+플레이(66848+32828)
+//뭔가 값을 리턴해버리면 바로 사용 불가
+곱하기(3 ,5)
+
+
+play(곱하기)
+play(divide)
 play(plus); // 호출될 함수를 파라미터로 넘긴다. 그러면 play()가 호출해 줄 것이다.
 play(minus);
+
+function calculate(파라미터로콜백함수) {
+    console.log('똥싼다', 파라미터로콜백함수(5000, 2000))
+}
+
+function Calplus(a, b) {return  a + b;}
+calculate(Calplus)
+
+
 
 // 생각해 볼 문제?
 // 다음은 콜백 메서드인가? 아닌가?
