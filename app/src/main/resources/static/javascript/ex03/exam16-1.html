@@ -30,15 +30,13 @@
 // window.setTimeout(() => console.log("애로우 함수 호출..."), 15000);
 // window.setTimeout(() => console.log('하이용'), 15000); // 몇초후에 실행할지 등록해놓는 거임ㄷㄷ
 
-function print(){
-    console.log('2')
-}
+
 
 
 console.log('1')
-(function (setTimeout){console.log('2')}(setTimeout))
-setTimeout(print, 0)
+setTimeout(function () {console.log('하이요')}, 0)
 console.log('3')
+
 
 
 
