@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="x-btn1" onclick="const str = 'Hello'; alert(str)">버튼1</button>
+<button id="x-btn2" onclick="f1()">버튼2</button>
+<button id="x-btn3">버튼3</button>
+<button id="x-btn4">버튼4</button>
+<script>
+
+
+
+function f1() {
+    document.getElementById('x-btn2').onclick = () => {
+        const ment = '하이요'
+        console.log("버튼2")
+        alert(ment)
+        console.log(this) // 난 자기자신ㅇㅇ
+    }
+}
+
+document.querySelector('#x-btn3').addEventListener('click', () => {
+    const ment = '하이요 난 버튼3'
+    alert(ment)
+    console.log(this) // 난 윈도우 객체 가리킨다
+},false)
+
+
+const btn4 = document.querySelector('#x-btn4')
+const b4 = function () {
+    const ment = '하이요 나는 버튼4'
+    alert(ment)
+    console.log(this)
+}
+btn4.addEventListener('click', b4) // 01-1에서 함수 호출할 때 왜 b4() 이런식으로 호출안하는지 궁금함
+</script>
+</body>
+</html>

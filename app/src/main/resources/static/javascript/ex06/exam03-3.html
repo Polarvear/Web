@@ -25,6 +25,7 @@ var btnClick = function(e) {
 	alert("===> " + e.target.getAttribute("data-no"));
 	for (var e of el2) {
 		e.style["background-color"] = "yellow";
+        e.style.backgroundColor = "gray" // 같은 뜻임 위의 문장이랑
 	}
 };
 

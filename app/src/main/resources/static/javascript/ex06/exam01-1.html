@@ -95,7 +95,7 @@ btn3.addEventListener("click", () => {
   window.alert(str);
   console.log(this); // this는 window 객체이다.
 });
-btn3.addEventListener("click", btn3Click);
+btn3.addEventListener("click", btn3Click); //함수 주소 전달
 function btn3Click() {
   var str = "Hi3!!";
   window.alert(str);
